@@ -1,0 +1,32 @@
+https://lpi.org
+
+    # /sys/
+    # /proc/
+    # modprobe
+    # lsmod
+    # lspci
+    # lsusb
+    
+
+Install virtual box in Ubuntu and initial bash comands
+
+	# apt-cache search virtualBox
+	# sudo apt install virtualbox virtualbox-guess-additions-iso
+	# pwd - print working directory
+	# ls  - list the contents
+			-> directory = blue
+			-> files = white
+			-> orange = pack arquives like .gz, .bz2, .xz
+			-> green = executable files			
+	# cd  - change directory
+	# cd Documents/
+	# cd ~  - home directory
+	# cd .. - going back one directory
+	# cd ../.. = going back two directories
+	# man ls 	- list directory contents manual
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+
+    # dmesg
+    # journalctl
+    # BIOS
+    # UEFI
+    # bootloader
+    # kernel
+    # initramfs
+    # init
+    # SysVinit
+    # systemd
+
