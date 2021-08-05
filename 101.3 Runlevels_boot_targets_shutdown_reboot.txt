@@ -1,0 +1,30 @@
+-> 101.3. RUNLEVELS
+
+	-> Definition = Runlevel is a state in which the computer currently run linux controlled
+	-> Runlevel 0 and 6 are always the same independent of the distribution
+	-> Runlevel 0 
+			-> the system is switched off
+	-> Runlevel 1
+			-> emergency mode. Runlevel S. Single-user mode.
+			-> Only root can access the system.
+			-> No network services. No graphical user interface
+	-> Runlevel 2
+			-> Multiuser. No newwork services and no graphical user interface.
+	-> Runlevel 3
+			-> Multiuser. Network services. No graphical user interface.
+	-> Runlevel 4
+			-> Not used
+	-> Runlevel 5
+			-> Multiuser. Network services. Graphical user interface available
+	-> Runlevel 6
+			-> System will restart
+
+
+# man runlevel 		= Print previous and current SysV runlevel
+# runlevel 			= N 5 = display actual runlevel
+# init 3			= change to runlevel 3
+# telinit 6 		= change to runlevel 6 = restart
+
+-> 101.3 BOOT-TARGETS (systemd)
+	
+
