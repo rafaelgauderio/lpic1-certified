@@ -35,6 +35,7 @@
     # journalctl 		= query the systemd journal = consulta o diario do systemd
     					= only work with systemd Linux distributions
     # journalctl -k 	= kernel
+    					= shows the kernel messages of a systemd system and can only be used on systemd systems
 
     	-> Current Bootloader = GRUB 2
     								-> comando line interface
@@ -44,6 +45,8 @@
    				= press shift after the BIOS and hold it until the menu appears
    	# e 		= enter the edit mode, use to change certaun start parameters
    	# crtl + X  = start the system
+   				= key combination can we save changes made in the bootloader during the boot process
+   						 and boot the system with these changed settings
 
    	----------------------
    	-> SysVinit 
@@ -104,11 +107,14 @@
    		-> if two unit with the same name are in both directories, then the units
    				in th /etc directory is preferred
    	# systemctl list-units		= display all units off the system
-   	# sudo apt install ngnix
-   	# systemctl status ngnix
-   	# systemctl status | start | restart | stop ngnix
-
+   	# sudo apt install nginx
+   	# systemctl status nginx
+   	# systemctl status | start | restart | stop nginx
    	# vim /etc/systemd/system.conf 		= file of main configuration of systemd
+
+
+   	
+
 
 
 

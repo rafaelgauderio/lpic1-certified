@@ -40,22 +40,25 @@ Install virtual box in Ubuntu and initial bash comands
 				- directory number, numbers represents process id = PID
 	# cat modules	- concatenate and print the context of the file in the screen
 	# cd /sys   - virtual directory, files stay in the working memory
-				- ontains information about system hardware and kernel modules.
+				- contains information about system hardware and kernel modules.
 
 -> Devices Filesystem
-	-> cd /dev
+	# cd /dev
 			tty0 files  = prefabricated consoles
 						= devices are show as files in linux
-	-> cd /udev			= manage the device files
+	# cd /udev			= manage the device files
 		core plug device = can only be plugged whem the computer is swiched of.
 		hot plug device = can be connected to the system during runtime and also can be used immediately.
 		Dbas system = program that send messages back and foward between different applications and inform about events
+	-> Udev 
+		-> It is a file system present since Kernel 2.6
+		-> Responsible for managing the files and devices in the /dev directory
 
 
 -> Kernel Modules
 
 		-> Modules = (driver) is usually an integral part of the kernel
-	# cd /proc
+	# cd /proc  = contain files that are actually running processes
 	# cat modules = see the modules that the Kernel has just loades
 	# lsmod		= show the status of modules in the linux Kernel
 	# modinfo lp	= see further information on the module lp
@@ -92,6 +95,7 @@ Install virtual box in Ubuntu and initial bash comands
 	# lsusb -s 002:001	= specify only the devices on BUS 2 and device 1
 	# lsusb -s 002		= only bus2
 	# lsusb -d 1d6b:	= devices from manufactorer ID 1d6b
+	# lsusb -d [vendor]:[product]
 	# lsusb -v -s 001	= versose of bus 001 and device 001
 	# lsusb -t 			= tree view
 

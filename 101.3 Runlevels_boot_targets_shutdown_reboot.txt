@@ -26,5 +26,48 @@
 # telinit 6 		= change to runlevel 6 = restart
 
 -> 101.3 BOOT-TARGETS (systemd)
+
+		Runlevel 	Target
+	-> Runlevel 0 	= porweroff.target
+	-> Runlevel 1 	= rescue.target
+	-> Runlevel 2	= multi-user.target
+	-> Runlevel 3 	= multi-user.target
+	-> Runlevel 4 	= multi-user.target
+	-> Runlevel 5 	= graphical.target
+	-> Runlevel 6 	= reboot.target
+
+# systemctl isolate multi-user.target 	= swicht to the multi-user.target = go to runlevel 3
+# runlevel 		= display number runlevel 3
+# systemctl isolate reboot.target 		= go back to graphical target
+# systemctl get-default 		= graphical target
+# systemctl set-default multi-user.target 		= change the default boot target
+# systemctl isolate reboot.target 		= go back to set multi-user target (without graphical interface)
+# sytemctl isolate graphical.target
+
+# man shutdown 		= shutdown, halt, power-off or reboot the machine
+# shutdown [option] [time] [wall]
+# shutdown -r +10 	= reboot in 10 minutes
+# shutdown -c 		= cancel the shutdown
+# shutdown -r now 	= reboot now
+# shutdown -r +0 	= reboot now
+# shutdown -h +20 	= shutdown an switched off immediately
+# shutdown -h 23:45 = shutdown at especific time
+
+# man reboot 		= halt, poweroff, reboot 
+# reboot -p --porweroff
+# reboot --reboot
+# reboot -f --force
+
+# wall 				= write a message to all user
+# wall -t --timeout
+# wall -g --group
+# wall -h --help
+# shutdown -r 0:00 wall Atention! The server will restart at midnight!
+
+
+
+
+
+
 	
 
