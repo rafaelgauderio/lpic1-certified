@@ -1,0 +1,32 @@
+-> 102.1. PLAN HARD DISK PARTITIONING
+
+	-> DIRECTORY STRUCTURE ACCORDING TO FHS
+		/bin 	= basic linux comand binaries
+		/boot 	= static files of the bootloader and static files of the linux Kernel
+		/dev 	= device files from physical and logical devices
+		/etc 	= configuration files
+		/home 	= user directories of the users
+		/lib 	= Dynamic libraries and kernel modules
+		/media 	= mount point for removable media
+		/mnt 	= mount point for temporarily mounted system
+		/opt 	= additional / optional programs
+		/root 	= home directory of root
+		/run 	= relevant data for ongoing processes
+		/sbin 	= basic linux commando binaries tha can only be executed by root 
+						or users with root right
+		/srv 	= Data on varius services
+		/tmp 	= temporary data
+		/usr 	= system tools, libraries, documents and programs
+		/var 	= data that is constantly changing, log files
+
+	------------------------------------------
+	-> SWAP
+
+	------------------------------------------
+	-> PARTITIONS
+
+	------------------------------------------
+	-> MOUNT
+
+	------------------------------------------
+	-> LVM 
