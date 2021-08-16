@@ -67,6 +67,34 @@
 
 	------------------------------------------
 	-> MOUNT
+		-> We have manually mount the new devices, like a cd room drive
+		-> Use differents partitions to create var and log files, because if the partition get fill up
+				the partition that contains the filesystem will not crashed.
+	# cd /etc/udev/rules.d 		= configuration files that deffined rules
+	# man mount 				= mount a filesystem 
+	# mount 					= display all the mounted filesystem, attached systems
+	# cat /proc/mounts 			= display all the mounted filesystem, attached systems
+	# cat /proc/self/mounts 	= display all the mounted filesystem, attached systems
 
 	------------------------------------------
-	-> LVM 
+	-> LVM
+		-> LOGICAL VOLUME MANAGE
+		-> fylesystem			/			/HOME 		/tmp
+		-> logical VOLUME 		LV_Root		LV_home 	LV_tmp
+		-> Volume Group (VG) 	VG HDD-Composite
+		-> Physical Volume  	/dev/sda 	/dev/sdb
+
+		-> In this example part of LV_home is on sda and part on sdb, this can only be
+				done because of LVM
+		-> LVM can be flexibly adjusted in size
+		-> can be create snapshots of a LVM and use as backup
+
+	# sudo pvs 		= physical volumes
+	# sudo vgs 		= volume groups
+	# sudo lvs 		= logical volumes
+
+
+
+
+
+
