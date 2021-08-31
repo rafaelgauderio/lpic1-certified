@@ -26,7 +26,7 @@
 -> UEFI
 
 # cd /boot/grub 			= do not edit
-# cat /boot/grub/grub.cfg
+# cat /boot/grub/grub.conf
 # vim /etc/default/grub 		= this file can be edit
 		GRUB_DEFAULT=0
 		GRUB_TIMEOUT_STYLE=hidden
