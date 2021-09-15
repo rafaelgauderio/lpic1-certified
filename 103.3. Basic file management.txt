@@ -1,0 +1,51 @@
+-> 103.3 BASIC FILE MANAGEMENT
+	
+	# cd 	- 							change directory
+	# cd /home/rafael/Downloads - 		absolute path
+	# cd .. 	-						step back in the directory tree	
+	# pwd 	-							/home/rafael
+	# cd Downloads/	 - 					switch relatively to directories	
+	# cd ../../../bin 	- 				three steps back and then go to bin directory
+	# cd ~ 	- 							change to the home directory
+	# cp 	- 							copy files and directories. informe source and destinations
+	# cp ./skypeforlinux-64.deb /tmp 	copy from current directory to /tmp	
+	# cp /tmp/skypeforlinux-64.deb . 	copy from tmp to current directory the we are
+	# cp -i /source /destination 		ask for confirmation (interactive)
+	# cp -p 							have the timestamp at the same time as before, not the actual timestamp
+										Copy with attribute information, as well as owner, permission, group, etc
+	# cp -r /tmp . 						recursive. Copy the complete directory /tmp to the current directory
+	# mv 								move or rename files. source file is deleted
+	# touch 							change file timestamps, create files also. timestamps also change when we change the
+											file, mas do not change when the file is just open or check it out
+	# touch file_name 					create file, under linux we do not have to assign a file extension
+	# touch -t 202104301230.20 file 	YEARMOUNTHDAYTIME.SECOND file_name
+	# file 								determinate file type. Tests each argument in an attemp to classify it
+	# file file_name 					empty file, ASCII text or another description
+	# ls -at							a =list also hidden files, t= sort by modification time with most recent first,
+											r = reverse
+	# ls -lh 							h = human readable
+	# ll 	 							alias (ls -alF) a = all, l = long details list,
+											F = differentiate files and directories, it will append / to directory entries
+	# mkdir 							make directory, -p --parents, -v --verbose
+	# mkdir test1 test2 test3 			create several directories at the same time
+	# rmdir 							remove EMPTY directories
+	# rmdir -p test5/test6/test7		-p --parents (delete sub folders also)
+	# rm -r directory_name 				remove directories with files and subfolders 
+	# rm -ivf file_name					-i --interactive, -v --verbose, -f --force
+	# rm -rf / 							delete everything from root directory. This command is not allowed
+	# rm -rf ./test1 					deletes the directory hete test1 ii the directory which we are current located
+	# find 								search for files in a directory hierarchy
+	# find -name file.txt 				search file by name
+	# find -name *.log 					search all files with file extension .log
+	# sudo find /var -name *.log 		search all files with file extension .log in also /var directory
+	# sudo find / -maxdepth 4 -name *.log 		search all in root directory with 3 maxdepth subfolders + 1 depth to the file
+
+
+
+
+
+
+										
+
+
+ 	
