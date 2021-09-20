@@ -83,6 +83,18 @@
 
     # ls *.txt 								list all files with txt extention
     # ls test* 								list all files the start with test
+    # ls text??								question mark, anu character, but one ? for each character
+    # ls [tT]est*.csv 						Test.csv	test.csv	test1.csv	test45.csv
+    # ls test[^1-2].txt 					test1.txt and test2.txt are excluded of the show list
+    # ls {table,chair}* 					table.txt 	chair.csv
+    # ls {table,test}[^1,2]*.[Tt]? 			list files with the word table or test, but without 1
+    		 		or 2 in the filename. Extention should start with capital T ou small t. Second character of the extention with X or x and a third other character include
+    # 
+
+
+
+
+
 
 
 
