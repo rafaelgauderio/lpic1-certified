@@ -1,0 +1,70 @@
+-> 103.5. CREATE, MONITOR AND TERMINATE PROCESSES
+
+		ps, top, uptime, free
+
+	# ps 					report a snapshot of the current processes.
+							display information about a selection of the active processes.
+	# ps -ef 				-e = select all processes. Identifical to -A, -f = full format list
+							PID = processes id, UID = user id, PPID = parent pid id
+							/sbin/init = PID = 1
+	# ps -ef | grep bash
+	# bash
+	# ps -ef | grep bash 	has the PPID, second bash emerged from the first PID
+	# pa -axu				-ax = list all process, slecet bu effective user ID or name
+	# pstree 				processes in a tree view
+	# pstree -p 			show the corresponding PID
+	# top 					Dynamic overwiew of the running processes.
+							See the processes that are using a lot of system resources
+	# uptime 				show load average, how long the system has been running
+						  	0 = full system is used, higher the value, more the system is used
+						  	The value should not be higher than the number of CPU course
+							tasks = running, sleeping, stopped, zombie
+	# ps -ef | nginx 		show PID 685 and PID 686
+	# top -p 685,686  		show in top only nginx processes
+							hot key t=sort by time, h=help and see individual hotkeys
+	# free 					show the main memory and swap memory in details (total,free, used)
+							-m = megabytes, -g = gigabytes, -h=humam readable
+
+		pggrep, kill
+
+	# pgrep					look up or signal processes bases on name and other atributes
+							looks through the currentky running processes and list the process IDs which match the selection
+										criteria to stdout
+	# pkill == pgrep
+	# pgrep ngnix 			685, 686 = PID
+	# pgrep -l ngnix		list the name of the processes
+	# kill 					shutdown signal to the processes
+	# kill -l 				show the posible segments = 64 =
+							1=SIGUP, 2=SIGIN, 3=SIGQUIT, 9=SIGKILL=kill hard, 15=SIGTERM=STANDARD SIGNAL=kill soft
+	# kill signal pid
+	# sudo kill -SIGTERM 685,686 			kill ngnix processes in a orderlu manner.
+	# sudo systemctl start nginx
+	# pgrep -l nginx 						8257, 8258 = PIDs
+	# sudo kill -15 8257,8258
+	# sudo kill -TERM 8315 					can omitted the word sig. -TERM = -SIGTERM
+	# sudo kill 8322 						use SIGTERM by default if no option is inform
+	# sudo kill -SIGSTOP 8343 				sleep the process, do not kill
+	# sudo KILL -SIGCONT 8343 				signal continue
+
+		pkill, killall
+
+	# pkill 					look uo or signal process based on NAME and other atributes
+	# killall 					kill processes by name
+	# pkill -SIGNAL name
+	# sudo pkill -x nginx 		-x = only kill the program with the exact name
+	# killall -l 				display all the signals that killall understands
+
+	# ps -fu rafael 			all processes that are running by user rafael
+	# sydo killall -u rafael 	kill all the processes that belong to the user rafael
+
+		nohup, screen, tmux
+
+
+
+
+		watch
+
+
+
+
+
