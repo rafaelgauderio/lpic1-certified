@@ -59,10 +59,47 @@
 
 		nohup, screen, tmux
 
+	# sleep 30 					program runs 30 seconds in the foreground. Prompt not avaliable
+	# jobs 						can check if we have any programs running in the background
+	# sleep 1000
+	# CRTL + Z 					equivalent SIGSTOP = pause the programm
+	# fg 						program continue foreground the command sleep 1000
+	# bg 						program sleep 1000 go to background
+	# sleep 2000
+	# CRTL + C 					processes terminated equivalent SIGINT = interrupet the terminal connection
+	# jobs 						now we see sleep 1000 & = running in background
+	# sleep 500 & 				command sleep 500 in background immediately
+	# ps -ef | grep sleep 		see the process running in background
+	# nohup 					redirect messages to a the file nohup.out in the directoru from which command was run
+	# nohup 					no SIGUP command is accepted
+	# nohup sleep 1000 & 	
+	# sudo apt install screen 	
+	# screen					screen running in the background
+	# ps -ef | grep screen
+	# screen 					start a screen manager with terminal emulation. some function that nohup
+		crtl + a + c 			another open is open
+		crtl + a + space 		switch  back and foward between windows
+		crtl + a + d 			detached from the window
+	# sudo apt install tmux 	
+	# tmux 						application that split a terminal window into multiple windows
+	# tmux 						another shell start
+		crtl + b + hotkeys
+		crtl + b + c 			open another window
+		crtl + b + s 			switch  back and foward between windows
+	# watch 					periodically execute a particular command over and over
+	# watch uptime 				uptime every two seconds
+		crtl + c 				leave watch command
+	# watch -n 5 uptime 		uptime every five seconds
 
 
 
-		watch
+
+
+
+
+
+
+		
 
 
 
