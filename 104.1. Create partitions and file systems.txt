@@ -45,6 +45,23 @@
 
 	# gdisk 				interactive GUID partition table (GPT) manipulator
 	# sudo gdisk /dev/sdc
+	# sudo gdisk -l /dev/sdc
 
 
-	# parted 				GNU parted - a partition manipulation program
+
+	# parted 					GNU parted - a partition manipulation program
+								create and change partition
+	# sudo parted -l --list 	list all the partitions
+	# sudo pated /dev/sdc
+		(parted) 		# help mklabel
+						# mklabel msdos
+						# help mkparted
+						# mkparted primary 			create a filesystem
+								btrfs
+								start? 0
+								End? 2000MB
+						# print	
+						# rm 						delete a partition
+								partition number?1
+								
+	# gparted 					graphical interface
