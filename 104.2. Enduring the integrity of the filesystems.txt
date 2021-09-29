@@ -44,4 +44,9 @@
 	# xfs_admin 					change parameters of an XFS filesystem
 	X xfs_metadump 					copy XFS filesystem metadata to a file
 
+	# dd 							data duplicator. Used to copy and convert data
+	# dd if={origin} of={destiny}[options]
+	# dd if=/dev/sda of=/dev/sdb bs=4096 conv=noerror,sync
+
+
 
