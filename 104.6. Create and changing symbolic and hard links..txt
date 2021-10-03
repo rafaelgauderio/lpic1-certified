@@ -1,0 +1,24 @@
+-> 104.6. Create and changing symbolic and hard links
+	
+	# ln file_name.txt link_name 				create hard link
+									both files have the same content, hard link is a copy
+									if the content of one file is changed, the other also is changed
+									the only way to recognizes a hard link is bases on the inode
+									can not do a hard link to one partitions to another
+
+	# ln  							make links between files
+	# ls -l 						see how manu links are from each file
+	# ll 							see the directories links
+	# ls -li 						check the inodes, equals inodes means hard links
+
+		-> soft links == symbolic links, comparable to links on windows system
+		-> if the original file is deleted, the soft link remains poiting to nothing
+		-> can be recognize because have a different color, show with an arrow and a letter "l"
+
+	# ln -s file_name.txt soft_link_name
+	# ln -s --symbolic
+
+
+
+
+
