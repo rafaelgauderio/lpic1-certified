@@ -1,6 +1,0 @@
-103.5. CREATE, MONITOR AND TERMINATE PROCESS
-	# ps 				report a snapshot of the current processes. display information about
-							selection of the active processes.
- 	# ps -ef			-e = all processes that are current running, -f= full format printing
- 						uid = user id, pid = process id, ppid = parent process id					
- 	# ps -ef | grep bash
