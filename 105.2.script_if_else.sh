@@ -29,5 +29,7 @@ elif [ $CALC = M]; then
 elif [ $CALC = D]; then
 	C=$(($X/$Y))
 	echo "The result of the Division is: $C"
+
+else echo -e "You inform a wrong option. Try agains!"
 	
 fi
