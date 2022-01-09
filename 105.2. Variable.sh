@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #system wide environment - valid for all users
-cat /etc/environment	#show the path variable
+cat /etc/environment	#show the path variable - all environment variables
 
 #user variables are valid only for the correspondig user
 echo $HOME		#/home/rafael
@@ -10,7 +10,7 @@ TEST=17			#name of variable TEST and 17 his value
 echo $TEST		#see the content of the variable, avaliable only in this terminal
 unset TEST		#delete the variable
 export TEST=17	#variable now is avaliable in all shells, but if close the terminal, the variable is lost
-printenv		#display all the environment variables
+printenv		#display all the environment variables, tha same as # env
 env 			# shortfall for environment
 env -i 			# env with ignore environment variables
 export TEST2=rafael
