@@ -31,9 +31,27 @@ grep devgroup /etc/group                # see the modifications
 groupdel devgroup               # delete the group devgroup
 
 cat /etc/nsswitch.conf
+# getent extract import information from files
 getent passwd                   # see the file cat /etc/passwd
+                                    
+# change informations from user
+usermod -s /bin/sh rafael       # change user shell
+usermod -l deluca rafael        # change the user name, new name come first
+grep rafael /etc/passwd         # see the users change
+usermod -G groupdev rafael      # change user rafael in the groupdev
+id rafael                       # see user uid, gid, groups, name
+usermod --aG rafael admin       # append rafael on group admin
 
+cat /etc/shadow                # contains the encrypted passwords
 
+# chage - changing information about expiration counts
+chage -l                        # list properties of expiration 
+                                # last password change, password expires, account expires,
+                                # number of days of warning before password expires
+chage -M 60 rafael              # password expires on 60 days
+chage -W 10 rafael              # set expiration warnign days to 10
+
+chage rafael                    # interective mode in wich you can set all expiration properties
 
 
 
