@@ -39,4 +39,22 @@ at 10102021
     # mkdir /home/rafael/new-test
     # ctrl + d
 
+# systemd
+cd /lib/systemd/system
+vi systemd-tmpfiles-clean.timer
+vi systemd-tmpfiles-clean.service
+    # [Unit]
+    # Description=Trigger anacron every hour
+    # [Timer]
+    # OnCalendar=*-*-* 07..23:20
+    # RandomizedDelaySec=5m
+    # Persistent=true
+    # [Install]
+    # WantedBy=timers.target
+systemctl list-timers
+systemd-run --on-active=60 /bin/touch /home/rafael/testfiles # create the file testfiles on 60 seconds
+
+
+
+
 
