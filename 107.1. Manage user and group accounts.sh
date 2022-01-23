@@ -22,6 +22,22 @@ vi /etc/passwd      # see all users from the system
 chsh -s /bin/false luciana   # change sthe shell user
 
 
+# creatig group
+groupadd -g 1600 developersgroup
+cat /etc/group      # see the groups stored on the system
+groupmod -g -1700 developersgroup       # modified the group id
+groupmod -n developersgroup devgroup    # modified the group name
+grep devgroup /etc/group                # see the modifications
+groupdel devgroup               # delete the group devgroup
+
+cat /etc/nsswitch.conf
+getent passwd                   # see the file cat /etc/passwd
+
+
+
+
+
+
 
 
 
