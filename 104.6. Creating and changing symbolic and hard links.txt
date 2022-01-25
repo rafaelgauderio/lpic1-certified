@@ -1,0 +1,5 @@
+104.6. Creating and changing symbolic and hard links 
+
+-> hardlinks are copys, have the same size, permissions and owners.
+-> if we have three hardlinks of a file, two can de delete and the file still exists
+

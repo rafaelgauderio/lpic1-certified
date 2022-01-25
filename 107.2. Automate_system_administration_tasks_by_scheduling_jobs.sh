@@ -9,7 +9,7 @@ vi /etc/crontab
     # * on the column means every day, hour, month, etc
     # sunday=0 or 7, Monday=1 ...
 
-crontab -e          # choose de editor
+crontab -e          # opens the own cron table choose de editor
     # m h   dom mon dow     command
     # 8 23  *   *   *       mkdir /home/rafael/crontab-test
 crontab -l          # display current crontab configuration

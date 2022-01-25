@@ -14,7 +14,7 @@ iconv -f UTF-8 -t ASCII filecharacterset > filecharacterset-ascii
 
 # language and country settings
 sudo dpkg-reconfigure locales
-echo $LANG      # display the language, countr = en_US.UTF-8
+echo $LANG      # display the language, countr = en_US.UTF-8 and character set
 date            # display the date and time
 date +"%x"      # display 01/22/2022
 
@@ -40,13 +40,13 @@ echo $LC_ADDRESS
 echo $LC_TELEPHONE
 echo $LC_ALL            # override all the espefifications, has priority over LANG variable
 
-sudo vi /etc/default/locale         # file with definitions of variables above
+sudo vi /etc/default/locale         # file with definitions of variables above. stamdard langague setting
 
 # timezones
 
-cat /etc/timezone          
+cat /etc/timezone               # timezone       
 
-ll /usr/share/zoneinfo
+ll /usr/share/zoneinfo          # zoneinfo
 
 cat /etc/localtime              # does not open
 file /etc/localtime             # symbolic link to /usr/share/zoneinfo/America/Brasilia

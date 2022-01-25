@@ -41,6 +41,7 @@ grep rafael /etc/passwd         # see the users change
 usermod -G groupdev rafael      # change user rafael in the groupdev
 id rafael                       # see user uid, gid, groups, name
 usermod --aG rafael admin       # append rafael on group admin
+usermod -L rafael               # blocks the user rafael
 
 cat /etc/shadow                # contains the encrypted passwords
 
