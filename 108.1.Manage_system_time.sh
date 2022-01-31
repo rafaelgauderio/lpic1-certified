@@ -7,7 +7,7 @@ date            # display system date and time
 
 systemctl stop systemd-timesyncd    # stop date and time syncronization
 
-hwclock --hctosys                   # set the hardware clock to system clock or hwclock -s
+hwclock --hctosys                   # set the hardware clock to system clock or hwclock -s align the hardware time with the system time
 hwclock --systohc                   # set the system clock to hardware clock or hwclock -w
 
 # setting time
@@ -42,6 +42,11 @@ systemctl start ntp
 
 ntpq -p                             # ntp daemon, see a table with remote time server, ip address from the server
 ntpq                                # prompt from ntpq
+
+ntpdate                             # adjust your computer's local date and time by consulting NTP servers
+
+vim /var/lib/ntp/ntp.drift          # file records systematic deviations in the CMOS clock.
+vim /usr/share/zoneinfo/leap-seconds.list   #  holds time jumps, e.g. leap seconds
 
 apt purge ntp
 apt clean

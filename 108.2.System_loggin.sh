@@ -18,6 +18,7 @@ cat /var/log/auth.log
 cd /var/log/
 ll | gre -i syslog
 tail -f syslog                  # display in real time what is being written to this log file
+cd /var/log/syslog              # standard rsyslog log file
 
 
 # logrotate = rewriting, renaming and compressing the block
