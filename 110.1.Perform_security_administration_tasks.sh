@@ -27,7 +27,7 @@ fuser                       # show which processes use the named files, sockets 
 fuser /home/rafael
 ps -ef | grep [PID]
 
-w                           # show who is currently loggin, informations like uptime
+w                           # shows which users are currently logged on to the system, informations like uptime
 who -u                      # show the user that is loggin
 who -d                      # display dead process
 
