@@ -24,7 +24,7 @@
     HTTPS - 443
 PORTS
 
-vi /etc/services                # file display all the ports
+vi /etc/services                # file display all the ports. relationship between service and port established.
 
 grep - i https /etc/services    # htpps 443/tcp
 

@@ -8,6 +8,9 @@ ifconfig enp0s3 192.168.178.25 netmask 255.255.255.0        # set Ip address and
 ifconfig enp0s3 down        # deactivated the adapter
 ifconfig enp0s3 up          # activated the adapter
 
+ifdown eth0                 # switches off the eth0 network interface
+ifup eth0                   # switches on the eth0 network interface 
+
 ping                        # send a request to an address and see if we get a answer           
 ping 192.168.178.1
     # ctrl + C = end the output
@@ -33,6 +36,7 @@ ping -c 1 linux.kurse.com
 traceroute linux.kurse.com          # see the path of the data package took to reach its destination and the router response
 traceroute -n google.com            # display the path with Ip Address
 
+# tracepath                         # is the counterpart to traceroute
 tracepath delucahigiene.com.br      # show the path like the traceroute but different
 
 
@@ -42,7 +46,7 @@ netstat -r                          # display the route table
 netstat -atop                       # all, TCP, timer information, PID/program name
 netstap -atop | grep ":80"          # see if webserver is activated
 
-ss                      # socket statistics. recplace netstat
+ss                      # socket statistics. recplace netstat.  The counterpart to netsta
                         # contact the kernel direcly
 ss -atop
 

@@ -51,6 +51,7 @@ cat /etc/hostame                    # content of the file display the computer n
 
 hostnamectl                         # display hostname, Operation system, architeture, Kernel, Machine ID, Virtualization
 hostnamectl --help
+hostname -I                         # display the ip address of the local computer
 hostnamectl status
 hostname set-hostname NAME
 hostname set-icon-name NAME
