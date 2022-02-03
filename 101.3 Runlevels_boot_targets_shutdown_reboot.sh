@@ -1,3 +1,5 @@
+#!/bin/bash  
+
 <<Runlevels
 -> 101.3. RUNLEVELS
 
