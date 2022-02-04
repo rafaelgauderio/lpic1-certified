@@ -1,3 +1,6 @@
+#!/bin/bash
+
+<<Virtualization
 102.6. LINUX AS GUEST VIRTUALIZATION
 
 -> Virtual Machine
@@ -35,6 +38,8 @@ Libraries		Libraries		Libraries
 			light operating systems APIs that run is a user mode.
 
 	-> Virtual Machines run a complete operating system including the kernel it self.
+Virtualization
+
 
 
 
