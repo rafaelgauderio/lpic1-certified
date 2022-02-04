@@ -1,5 +1,4 @@
-#!/bin/bash  
-
+#!/bin/bash
 
 # 102.2. INSTALL A BOOT MANAGER
 
