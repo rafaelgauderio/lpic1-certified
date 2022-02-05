@@ -35,7 +35,7 @@ rmdir -p test5/test6/test7				# -p --parents (delete sub folders also)
 rm -r directory_name 					# remove directories with files and subfolders 
 rm -ivf file_name						# -i --interactive, -v --verbose, -f --force
 rm -rf / 								# delete everything from root directory. This command is not allowed
-rm -rf ./test1 							# deletes the directory hete test1 ii the directory which we are current located
+rm -rf ./test1 							# deletes the directory test1 in the directory which we are current located
 man find 								# search for files in a directory hierarchy
 find -name file.txt 					# search file by name
 find -name *.log 						# search all files with file extension .log
@@ -57,17 +57,16 @@ tar -czvf file3.tar.gz file1 file.txt	# z= gzip compression, choose always the e
 tar -tzf file3.tar.gz             		# display que content of the compressed file with gzip
 tar -xzvf file3.tar.giz 				# extrated the compressed file
 tar -cvjf file4.tar.bz2 file1 file.txt 	# j= b2zip compressed	archive	
-tar -cvJf file4.tar.bz2 file1 file.txt  # J= xz compressed archive	
+tar -cvJf file4.tar.xz file1 file.txt  # J= xz compressed archive	
 
 cpio -o 								# copy in copy out. similar to tar. Can be compression or not. -o = copy-out
 cpio -i									# copy files to and from archives and directories. -i = copy-in
-# options cpio -o, --create, -i --extract -p, --pass-through 
+# options cpio -o, --create, -i --extract -p, --pass-through , -t = show content
 ls | cpio -o > content.cpio.txt       	# copy the files in the packed file content.cpio.txt
 cpio -it < content.cpio.txt 			# show the content of and unpacked content.cpio.txt file
 find . | cpio -o > packed.cpio 			# find everything in the current folder and send to cpio int copy out mode
-find . | cpio -pd /tmp/test 			# copy found files by copy pass mode. -d option ensures that /tmp/test directory
-  													# is create if doesn´t already exits.
-find . | cpio -pd /tmp/text == cp -r * /tmp/test
+find . | cpio -pd /tmp/test 			# copy found files by copy pass mode. -d option ensures that /tmp/test directory is create if doesn´t already exits.
+find . | cpio -pd /tmp/text 			# (equals)	 cp -r * /tmp/test
 
 gzip file1 								# create a compressed file file1.gz, original file is deleted after compressed
 gzip file1 file2 						# compress the two file individually, not grouping. file1.gz file2.gz
@@ -79,19 +78,20 @@ gunzip file35.gz 						# decompress files, the same as using -d option
 
 bzip2 file1 							# create a compress file1.bz2
 bzip2 -dk file1.bz2 					# decompress file1.bz2
-bunzip2 -dk file1.bz2 					# the same as bzip2 -d
+bunzip2 -k file1.bz2 					# the same as bzip2 -d
 
 xz -k file1								# create a compress file1.xz, -k --keep
 xz -d file1.xz 							# decompress file.xz
 
 ls *.txt 								# list all files with txt extention
 ls test* 								# list all files the start with test
-ls text??								# question mark, anu character, but one ? for each character
+ls text??								# question mark, any character, but one ? for each character
 ls [tT]est*.csv 						# Test.csv	test.csv	test1.csv	test45.csv
 ls test[^1-2].txt 						# test1.txt and test2.txt are excluded of the show list
 ls {table,chair}* 						# table.txt 	chair.csv
 ls {table,test}[^1,2]*.[Tt]? 			# list files with the word table or test, but without 1
-    		 							# or 2 in the filename. Extention should start with capital T ou small t. Second character of the extention with X or x and a third other character include
+    		 							# or 2 in the filename. Extention should start with capital T ou small t. 
+										# Second character of the extention with X or x and a third other character include
     
 
 
