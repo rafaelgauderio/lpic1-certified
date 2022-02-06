@@ -7,7 +7,7 @@
 	# sudo du -hs /usr 		check the size of usr folder
 	# sudo du -h --max-depth=4 /home
 
-	# man df 				disk filesystem. Report file system disk space usage
+	# man df 				disk filesystem. Report file system disk space usage. Disk usage partitions.
 	# df -h	--human-readable
 	# df -i --inodes		inode contain various metadata (data, time, size, permissions)
 
