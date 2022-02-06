@@ -1,3 +1,6 @@
+# Questions of 101 until 104 chapter
+
+<<quiz
 Which command can you use to output the content of a variable?
 	# echo $VARIABLE
 In which file is a user's command history stored?
@@ -32,7 +35,7 @@ Which command do you use when you want to search for extended regular expression
 	# egrep == grep -E
 Which command can you use to change the nice value of a process that is already running?
 	# renice
-
+quiz
 
 
 

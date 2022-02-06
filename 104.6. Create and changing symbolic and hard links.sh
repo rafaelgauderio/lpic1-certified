@@ -16,15 +16,25 @@
 		-> can be recognize because have a different color, show with an arrow and a letter "l"
 links
 
-ln file_name.txt link_name 			# create hard link
+# ln [source] [link]
+# ln /path/to/source	/path/to/link
+ln file_name.txt link_name 			# create hard link if do not specify the type
+link file_name.txt link_name		# create hard link if do not specify the type
 man ln  							# make links between files
 ls -l 								# see how many links are from each file
 ll 									# see the directories links
 ls -li 								# check the inodes, equals inodes means hard links
 
-
+# ln -s [original filename] [link name]
 ln -s file.txt link_to_file			# file_name.txt soft_link_name
 ln -s 								# ln --symbolic
+
+# ln options
+	# -f --force
+	# -P --physical
+	# -s --symbolic
+	# -d -F --directory	 -> create hard links to directory
+
 
 
 
