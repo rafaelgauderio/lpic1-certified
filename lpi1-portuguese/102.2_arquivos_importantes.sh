@@ -48,4 +48,3 @@ dd if=mbr.backup of=/dev/hda
     # restaurar a cópia da MBR (Master Boot Record)
 
 
-
